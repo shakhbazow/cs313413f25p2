@@ -51,15 +51,15 @@ State how many times the tests were executed for each SIZE (10, 100, 1000 and 10
 								  #1   #2   #3   #4   #5   #6 	... (as many tests as you ran)
         testArrayListAddRemove:  296.43 300.92 312.28 295.13 296.11 295.16  ... (fill these in in ms)
         testLinkedListAddRemove: 23.57 29.74 22.64 22.99 24.42 27.86
-		testArrayListAccess:     val1 val2 val3 val4 val5 val6
-        testLinkedListAccess:    val1 val2 val3 val4 val5 val6
+		testArrayListAccess:     9.57 9.32 8.83 10.24 9.42 9.16
+        testLinkedListAccess:    20.87 23.98 22.42 22.54 24.44 23.76
 
 	SIZE 1000
 								  #1   #2   #3   #4   #5   #6 	... (as many tests as you ran)
-        testArrayListAddRemove:  val1 val2 val3 val4 val5 val6  ... (fill these in in ms)
-        testLinkedListAddRemove: val1 val2 val3 val4 val5 val6
-		testArrayListAccess:     val1 val2 val3 val4 val5 val6
-        testLinkedListAccess:    val1 val2 val3 val4 val5 val6
+        testArrayListAddRemove:  22.24 27.23 23.95 38.72 25.72 26.45  ... (fill these in in ms)
+        testLinkedListAddRemove: 401.46 373.95 404.54 395.15 461.10 373.02
+		testArrayListAccess:     9.21 10.62 9.16 9.19 9.63 9.18
+        testLinkedListAccess:    270.64 278.38 275.49 278.21 283.57 272.35
 
 	SIZE 10000
 								  #1   #2   #3   #4   #5   #6 	... (as many tests as you ran)
