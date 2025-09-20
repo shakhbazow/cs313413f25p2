@@ -20,7 +20,7 @@ public class TestPerformance {
 
   // TODO choose this value in such a way that you can observe an actual effect
   // for increasing problem sizes
-  private final int REPS = 20000000;
+  private final int REPS = 200000;
 
   private List<Integer> arrayList;
 
