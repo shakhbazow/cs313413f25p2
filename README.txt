@@ -1,10 +1,3 @@
-I ran the SIZE and REPS in different numbers and found that when I tuned REPS to twice the amount, it ran for 3 seconds instead of 2. When I tuned it to 20 million and tuned SIZE to 200, it took 7 seconds.
-
-So:
-
-1) SIZE 100 REPS 200,000 = 2 seconds
-2) SIZE 100 REPS 400,000 = 3 seconds
-3) SIZE 200 REPS 20 000 000 = 7 seconds
 
 TestIterator:
 TODO Question: Also try with a LinkedList - does it make any difference?
@@ -22,23 +15,8 @@ TODO Question: What does this one do? list.remove(Integer.valueOf(5)); //
 
 TestPerformance:
 TODO Question: What conclusions can you draw about the performance of LinkedList vs. ArrayList when comparing their running times for AddRemove vs. Access? Record those running times in README.txt!
--No performance difference at default scales, however I noticed a big difference in  LL and Array AddRemove functions when scaling out the REPS to 20 million again. Here:
-6 second difference
-
-BUILD SUCCESSFUL in 1s
-2 actionable tasks: 1 executed, 1 up-to-date
-10:14:26 PM: Execution finished ':test --tests "cs271.lab.list.TestPerformance.testLinkedListAddRemove"'.
-
-BUILD SUCCESSFUL in 7s
-2 actionable tasks: 1 executed, 1 up-to-date
-10:13:19 PM: Execution finished ':test --tests "cs271.lab.list.TestPerformance.testArrayListAddRemove"'.
-
-No difference noted when scaling out the size in any function.
-
-//
-
-State how many times the tests were executed for each SIZE (10, 100, 1000 and 10000)
-	to get the running time in milliseconds and how the test running times were recorded.
+- As SIZE increases, Array stays very efficient throughout for access, but very innefficient for addRemove.
+- LList on the other hand, stays very efficient for add/remove, but very slow for access.
 
 	SIZE 10
 								  #1   #2   #3   #4   #5   #6 	... (as many tests as you ran)
@@ -63,7 +41,19 @@ State how many times the tests were executed for each SIZE (10, 100, 1000 and 10
 
 	SIZE 10000
 								  #1   #2   #3   #4   #5   #6 	... (as many tests as you ran)
-        testArrayListAddRemove:  val1 val2 val3 val4 val5 val6  ... (fill these in in ms)
-        testLinkedListAddRemove: val1 val2 val3 val4 val5 val6
-		testArrayListAccess:     val1 val2 val3 val4 val5 val6
-        testLinkedListAccess:    val1 val2 val3 val4 val5 val6
+        testArrayListAddRemove:  1443.1 1425.4 1871.5 1831.8 1844.7 1842.7  ... (fill these in in ms)
+        testLinkedListAddRemove: 24.73 24.70 27.94 26.11 28.45 24.80
+		testArrayListAccess:     11.68 9.00 12.68 10.29 8.18 13.36
+        testLinkedListAccess:    5005.3 6203.7 6067.3 5844.9 6184.2 6498.9
+
+
+     Also I ran the whole Test Performances for adjusted REPS, and the higher REPS resulted in longer run times.
+
+     BUILD SUCCESSFUL in 1s
+     2 actionable tasks: 1 executed, 1 up-to-date
+     10:14:26 PM: Execution finished ':test --tests "cs271.lab.list.TestPerformance.testLinkedListAddRemove"'.
+
+     BUILD SUCCESSFUL in 7s
+     2 actionable tasks: 1 executed, 1 up-to-date
+     10:13:19 PM: Execution finished ':test --tests "cs271.lab.list.TestPerformance.testArrayListAddRemove"'.
+
