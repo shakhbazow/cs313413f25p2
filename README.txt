@@ -21,5 +21,16 @@ TODO Question: What does this one do? list.remove(Integer.valueOf(5)); //
 - Removes first occurence of 5, like in case of 77 previously.
 
 TestPerformance:
-TODO Question: What conclusions can you draw about the performance of LinkedList vs. ArrayList when omparing their running times for AddRemove vs. Access? Record those running times in README.txt!
--
+TODO Question: What conclusions can you draw about the performance of LinkedList vs. ArrayList when comparing their running times for AddRemove vs. Access? Record those running times in README.txt!
+-No performance difference at default scales, however I noticed a big difference in  LL and Array AddRemove functions when scaling out the REPS to 20 million again. Here:
+6 second difference
+
+BUILD SUCCESSFUL in 1s
+2 actionable tasks: 1 executed, 1 up-to-date
+10:14:26 PM: Execution finished ':test --tests "cs271.lab.list.TestPerformance.testLinkedListAddRemove"'.
+
+BUILD SUCCESSFUL in 7s
+2 actionable tasks: 1 executed, 1 up-to-date
+10:13:19 PM: Execution finished ':test --tests "cs271.lab.list.TestPerformance.testArrayListAddRemove"'.
+
+No difference noted when scaling out the size in any function. 
