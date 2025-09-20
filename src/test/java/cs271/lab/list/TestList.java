@@ -1,15 +1,13 @@
 package cs271.lab.list;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
 
 public class TestList {
 
@@ -41,17 +39,21 @@ public class TestList {
   public void testSizeNonEmpty() {
     // TODO fix the expected values in the assertions below
     list.add(77);
-    assertEquals(true, list.isEmpty());
-    assertEquals(0, list.size());
-    assertEquals(0, list.get(0).intValue());
+    assertEquals(false, list.isEmpty());
+    assertEquals(1, list.size());
+    assertEquals(77, list.get(0).intValue());
   }
 
   @Test
   public void testContains() {
     // TODO write assertions using
+    assertFalse(list.contains(77));
+    list.add(77);
+    assertTrue(list.contains(77));
+
     // list.contains(77)
     // that hold before and after adding 77 to the list
-    fail("Not yet implemented"); // remove this line when done
+   // fail("Not yet implemented"); // remove this line when done
   }
 
   @Test
@@ -60,10 +62,10 @@ public class TestList {
     list.add(77);
     list.add(77);
     // TODO fix the expected values in the assertions below
-    assertEquals(0, list.size());
+    assertEquals(3, list.size());
     assertEquals(0, list.indexOf(77));
-    assertEquals(0, list.get(1).intValue());
-    assertEquals(0, list.lastIndexOf(77));
+    assertEquals(77, list.get(1).intValue());
+    assertEquals(2, list.lastIndexOf(77));
   }
 
   @Test
@@ -76,11 +78,11 @@ public class TestList {
     list.add(77);
     list.add(66);
     // TODO fix the expected values in the assertions below
-    assertEquals(0, list.size());
-    assertEquals(0, list.indexOf(77));
-    assertEquals(0, list.lastIndexOf(77));
-    assertEquals(0, list.get(2).intValue());
-    assertEquals(0, list.get(3).intValue());
+    assertEquals(7, list.size());
+    assertEquals(1, list.indexOf(77));
+    assertEquals(5, list.lastIndexOf(77));
+    assertEquals(44, list.get(2).intValue());
+    assertEquals(77, list.get(3).intValue());
     assertEquals(List.of(33, 77, 44), list);
   }
 

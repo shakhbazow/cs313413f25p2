@@ -65,13 +65,13 @@ public class TestIterator {
 
   @Test
   public void testRemove() {
-    /* list.add(33);
+    list.add(33);
     list.add(77);
     list.add(44);
     list.add(77);
     list.add(55);
     list.add(77);
-    list.add(66); */
+    list.add(66);
     final var i = list.iterator();
     while (i.hasNext()) {
       if (i.next() == 77) {
@@ -87,13 +87,13 @@ public class TestIterator {
 
   @Test
   public void testAverageValues() {
-    /* list.add(33);
+    list.add(33);
     list.add(77);
     list.add(44);
     list.add(77);
     list.add(55);
     list.add(77);
-    list.add(66); */
+    list.add(66);
     double sum = 0.0;
     int n = 0;
     final Iterator<Integer> i = list.iterator();
