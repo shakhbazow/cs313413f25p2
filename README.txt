@@ -33,4 +33,37 @@ BUILD SUCCESSFUL in 7s
 2 actionable tasks: 1 executed, 1 up-to-date
 10:13:19 PM: Execution finished ':test --tests "cs271.lab.list.TestPerformance.testArrayListAddRemove"'.
 
-No difference noted when scaling out the size in any function. 
+No difference noted when scaling out the size in any function.
+
+//
+
+State how many times the tests were executed for each SIZE (10, 100, 1000 and 10000)
+	to get the running time in milliseconds and how the test running times were recorded.
+
+	SIZE 10
+								  #1   #2   #3   #4   #5   #6 	... (as many tests as you ran)
+        testArrayListAddRemove:  277.55 284.01 287.87 281.53 268.78 289.70  ... (fill these in in ms)
+        testLinkedListAddRemove: 26.76 24.94 23.89 25.11 22.63
+		testArrayListAccess:     8.81 8.87 9.86 8.70 9.82 8.19
+        testLinkedListAccess:    12.00 10.59 11.55 11.92 10.67 14.66
+
+	SIZE 100
+								  #1   #2   #3   #4   #5   #6 	... (as many tests as you ran)
+        testArrayListAddRemove:  296.43 300.92 312.28 295.13 296.11 295.16  ... (fill these in in ms)
+        testLinkedListAddRemove: 23.57 29.74 22.64 22.99 24.42 27.86
+		testArrayListAccess:     val1 val2 val3 val4 val5 val6
+        testLinkedListAccess:    val1 val2 val3 val4 val5 val6
+
+	SIZE 1000
+								  #1   #2   #3   #4   #5   #6 	... (as many tests as you ran)
+        testArrayListAddRemove:  val1 val2 val3 val4 val5 val6  ... (fill these in in ms)
+        testLinkedListAddRemove: val1 val2 val3 val4 val5 val6
+		testArrayListAccess:     val1 val2 val3 val4 val5 val6
+        testLinkedListAccess:    val1 val2 val3 val4 val5 val6
+
+	SIZE 10000
+								  #1   #2   #3   #4   #5   #6 	... (as many tests as you ran)
+        testArrayListAddRemove:  val1 val2 val3 val4 val5 val6  ... (fill these in in ms)
+        testLinkedListAddRemove: val1 val2 val3 val4 val5 val6
+		testArrayListAccess:     val1 val2 val3 val4 val5 val6
+        testLinkedListAccess:    val1 val2 val3 val4 val5 val6

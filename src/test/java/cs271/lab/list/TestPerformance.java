@@ -16,11 +16,11 @@ public class TestPerformance {
   // comparing their running times for AddRemove vs. Access? Record those running times in README.txt!
   // TODO (optional) refactor to DRY
   // which of the two lists performs better as the size increases?
-  private final int SIZE = 2000;
+  private final int SIZE = 100;
 
   // TODO choose this value in such a way that you can observe an actual effect
   // for increasing problem sizes
-  private final int REPS = 200000;
+  private final int REPS = 1000000;
 
   private List<Integer> arrayList;
 
@@ -44,34 +44,54 @@ public class TestPerformance {
 
   @Test
   public void testLinkedListAddRemove() {
+    long t0 = System.nanoTime();
     for (var r = 0; r < REPS; r++) {
       linkedList.add(0, 77);
       linkedList.remove(0);
     }
+    long t1 = System.nanoTime();
+
+    double ms = (t1 - t0) / 1_000_000.0; // convert to milliseconds
+    System.out.printf("LList add/remove took %.2f ms%n", ms);
   }
 
   @Test
   public void testArrayListAddRemove() {
+    long t0 = System.nanoTime();
     for (var r = 0; r < REPS; r++) {
       arrayList.add(0, 77);
       arrayList.remove(0);
     }
+    long t1 = System.nanoTime();
+
+    double ms = (t1 - t0) / 1_000_000.0; // convert to milliseconds
+    System.out.printf("ArrayList add/remove took %.2f ms%n", ms);
   }
 
   @Test
   public void testLinkedListAccess() {
+    long t0 = System.nanoTime();
     var sum = 0L;
     for (var r = 0; r < REPS; r++) {
       sum += linkedList.get(r % SIZE);
     }
+    long t1 = System.nanoTime();
+
+    double ms = (t1 - t0) / 1_000_000.0; // convert to milliseconds
+    System.out.printf("LList add/remove took %.2f ms%n", ms);
   }
 
   @Test
   public void testArrayListAccess() {
+    long t0 = System.nanoTime();
     var sum = 0L;
     for (var r = 0; r < REPS; r++) {
       sum += arrayList.get(r % SIZE);
     }
+    long t1 = System.nanoTime();
+
+    double ms = (t1 - t0) / 1_000_000.0; // convert to milliseconds
+    System.out.printf("ArrayList add/remove took %.2f ms%n", ms);
   }
 }
 
